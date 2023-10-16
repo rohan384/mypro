@@ -1,0 +1,35 @@
+{% extends 'driver/index.html'%}
+{% load static%}
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bus TimeTable</h1>
+    <table border="2">
+        <tr>
+            <td>Bus Name</td>
+    <td>From</td>
+    <td>Departure Time</td>
+    <td>To</td>
+    <td>Arrival Time</td>
+    </tr>
+    <tr>{% for j in data %}</tr>
+    <tr>
+        <td>{{j.bus_name}}</td>
+        <td>{{j.b_from}}</td>
+        <td>{{j.departure}}</td>
+        <td>{{j.to}}</td>
+        <td>{{j.arrival}}</td>
+        <td><a href="{% url 'update' pk=j.id %}">update</a></td>
+        <td><a href="{% url 'delete' pk=j.id %}">delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

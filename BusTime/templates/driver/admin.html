@@ -1,0 +1,29 @@
+{% extends 'driver/index.html'%}
+{% load static%}
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bustime add</title>
+</head>
+<body>
+    <h3>Add Bus Details</h3>
+    <form method="POST" action="add" >
+        {% csrf_token %}
+        {{form.as_p}}
+    
+    <input type="submit" value="addbus">	
+        
+    </form>
+    <p>{{msg}}</p>
+    <br><br>
+    <!-- <a href="table">Edit</a>	 -->
+    <br><br>
+    <!-- <form action="logout">
+        <input type="submit" value="Signout">
+    </form> -->
+</body>
+</html>
+{% endblock %}

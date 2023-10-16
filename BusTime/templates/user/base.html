@@ -1,0 +1,27 @@
+{% extends 'user/u_index.html'%}
+{% load static%}
+{% block body_block %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Website{% endblock %}</title>
+    <!-- Include CSS and other common resources here -->
+</head>
+<body>
+    <header>
+        <!-- Common header content, e.g., logo and navigation menu -->
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <!-- Common footer content -->
+    </footer>
+    <br>
+<!-- <a href="table">Back</a> -->
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+<html>
+    <head><title>forms</title></head>
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+            <table border="3">
+                <tr>
+                    <td>Bus Name</td>
+                    <td><input type="text" name="bus_name" value="{{data.bus_name}}"></td>
+                </tr>
+                <tr>
+                    <td>From</td>
+                    <td><input type="text" name="b_from" value="{{data.b_from}}"></td>
+                </tr>
+               
+                <tr>
+                    <td>Departure</td>
+                    <td><input type="time" name="departure" value="{{data.departure}}"></td>
+                </tr>
+                <tr>
+                    <td>To</td>
+                    <td><input type="text" name="to" value="{{data.to}}"></td>
+                </tr>
+                <tr>
+                    <td>Arrival</td>
+                    <td><input type="time" name="arrival" value="{{data.arrival}}"></td>
+                </tr>
+
+                <tr>
+                    <td>&#160</td>
+                    <td><input type="submit" value="update"></td>
+                </tr>
+            </table>          
+            </form>
+    </body>
+</html
